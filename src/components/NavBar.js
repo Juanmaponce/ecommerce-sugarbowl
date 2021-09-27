@@ -12,8 +12,8 @@ class NavBar extends React.Component {
             <span className="fs-4">SugarBowl</span>
           </a>
 
-          <ul class="nav nav-pills">
-            <li class="nav-item">
+          <ul className="nav nav-pills">
+            <li className="nav-item">
               <a href="/" className="nav-link px-2 text-white" aria-current="page">
                 Inicio
               </a>
