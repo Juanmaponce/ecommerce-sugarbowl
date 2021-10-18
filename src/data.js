@@ -1,6 +1,8 @@
 export const products = [
   {
     id: 1,
+    categoryId: 1,
+    category: "pasteleria",
     itemName: "Torta Oreo",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, delectus! Neque totam exercitationem quod vitae modi eligendi, fugit voluptatibus nihil similique odio voluptate, incidunt possimus! Perspiciatis autem laboriosam obcaecati temporibus.",
     stock: 8,
@@ -10,6 +12,8 @@ export const products = [
   {
     id: 2,
     itemName: "Torta Decorada",
+    categoryId: 1,
+    category: "pasteleria",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, delectus! Neque totam exercitationem quod vitae modi eligendi, fugit voluptatibus nihil similique odio voluptate, incidunt possimus! Perspiciatis autem laboriosam obcaecati temporibus.",
     stock: 2,
     price: 200,
@@ -17,6 +21,8 @@ export const products = [
   },
   {
     id: 3,
+    categoryId: 2,
+    categoryName: "panaderia",
     itemName: "Pan de campo",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, delectus! Neque totam exercitationem quod vitae modi eligendi, fugit voluptatibus nihil similique odio voluptate, incidunt possimus! Perspiciatis autem laboriosam obcaecati temporibus.",
     stock: 5,
