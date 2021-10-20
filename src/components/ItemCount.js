@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import { Button } from 'react-bootstrap'
 
-const ItemCount = (props) => {
+const ItemCount = ({item, onAdd}) => {
   const [count, setCount] = useState(1);
 
-  const stock = props.stock;
+  const stock = item.stock;
 
   const handleCountUp = () => {
     if (count < stock) {
@@ -17,23 +18,29 @@ const ItemCount = (props) => {
   };
 
   return (
-    <div className="input-group mb-3 text-center" style={{ with: "100%" }}>
-      <button
-        className="btn btn-outline-primary"
-        type="button"
-        onClick={handleCountDown}
+    <>
+      <div
+        className="input-group mb-3 text-center d-flex justify-content-center"
+        style={{ with: "100%" }}
       >
-        -
-      </button>
-      <span className="input-group-text px-5">{count}</span>
-      <button
-        className="btn btn-outline-primary"
-        type="button"
-        onClick={handleCountUp}
-      >
-        +
-      </button>
-    </div>
+        <button
+          className="btn btn-outline-primary"
+          type="button"
+          onClick={handleCountDown}
+        >
+          -
+        </button>
+        <span className="input-group-text px-5">{count}</span>
+        <button
+          className="btn btn-outline-primary"
+          type="button"
+          onClick={handleCountUp}
+        >
+          +
+        </button>
+      </div>
+      <Button variant="success" onClick={() => onAdd(count)}>Añadir al carrito</Button>
+    </>
   );
 };
 
