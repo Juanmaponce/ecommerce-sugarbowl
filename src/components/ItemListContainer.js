@@ -10,10 +10,9 @@ const ItemListContainer = () => {
   useEffect(() => {
     setIsLoading(true)
     setTimeout(() => {
-        const asyncMock = new Promise((resolve, reject) => {
-            resolve(products)
-        });
-        asyncMock.then((response) => {setItems(response)})
+      fetch('https://fakestoreapi.com/products')
+      .then(res=>res.json())
+      .then(data => setItems(data))
         setIsLoading(false)
     }, 2000);
   }, []);
