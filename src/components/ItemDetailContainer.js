@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { products } from "../data";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router";
 import { Spinner } from 'react-bootstrap'
