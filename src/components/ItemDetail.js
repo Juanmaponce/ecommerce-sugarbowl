@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ItemCount from "./ItemCount";
-import {  useCartContext } from '../../CartContext';
+import {  useCartContext } from './CartContext';
 
 const ItemDetail = ({ item }) => {
-  const { addToCart } = useCartContext()
+  const { addItem } = useCartContext()
 
   const [count, setCount] = useState(null);
  
@@ -13,7 +13,7 @@ const ItemDetail = ({ item }) => {
 
   const onAdd = (count) => {
     count > 0 ? 
-   setCount((addToCart(item, count)), count) : alert("Agregar producto")
+   setCount((addItem(item, count)), count) : alert("Agregar producto")
   };
 
   return (
