@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import { useCartContext } from './CartContext'
 import _ from 'lodash'
+import { Link } from 'react-router-dom'
 
 const CartWidget = () => {
     const {cart} = useCartContext();
@@ -14,7 +15,9 @@ const CartWidget = () => {
 
     return (
         <div className="d-flex align-items-center mx-3">
-            <a href="/" className="text-secondary"><FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></a>
+            <Link to="/cart">
+                <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon>
+            </Link>
             <p>({cartQuantity})</p>
         </div>
     )

@@ -19,7 +19,7 @@ const ItemDetail = ({ item }) => {
   return (
     <div className="d-flex align-items-center justify-content-center mb-4">
       <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={item.image} />
+        <Card.Img variant="top" src={item.img} />
         <Card.Body>
           <Card.Title>{item.title}</Card.Title>
           <Card.Text>{item.description}</Card.Text>

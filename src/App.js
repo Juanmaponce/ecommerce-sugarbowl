@@ -1,4 +1,4 @@
-import NavBar from "./components/NavBar";
+import NavBar from "./components/NavBar/NavBar";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import Cart from "./components/Cart";
@@ -13,7 +13,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={ItemListContainer} />
 
-          <Route path="/category:id" component={ItemListContainer} />
+          <Route path="/category/:categoryid" component={ItemListContainer} />
 
           <Route path="/item/:id" component={ItemDetailContainer} />
           <Route path="/cart" component={Cart} />
