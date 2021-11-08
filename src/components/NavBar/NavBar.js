@@ -23,7 +23,7 @@ const NavBar = () => {
       justify="space-between"
       wrap="wrap"
       padding={6}
-      bg="blue.400"
+      bgGradient="linear(to-r, gray.600, gray.800)"
       color="white"
       borderBottomRightRadius={10}
       borderBottomLeftRadius={10}

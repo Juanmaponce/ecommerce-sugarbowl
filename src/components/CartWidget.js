@@ -3,6 +3,7 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import { useCartContext } from './CartContext'
 import _ from 'lodash'
 import { Link } from 'react-router-dom'
+import { Flex } from '@chakra-ui/layout'
 
 const CartWidget = () => {
     const {cart} = useCartContext();
@@ -14,12 +15,12 @@ const CartWidget = () => {
     console.log(cartQuantity)
 
     return (
-        <div className="d-flex align-items-center mx-3">
+        <Flex>
             <Link to="/cart">
                 <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon>
             </Link>
             <p>({cartQuantity})</p>
-        </div>
+        </Flex>
     )
 }
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Button } from 'react-bootstrap'
+import { Button, ButtonGroup, Stack, Text, Box } from "@chakra-ui/react";
 
-const ItemCount = ({item, onAdd}) => {
+const ItemCount = ({ item, onAdd }) => {
   const [count, setCount] = useState(1);
 
   const stock = item.stock;
@@ -18,29 +18,42 @@ const ItemCount = ({item, onAdd}) => {
   };
 
   return (
-    <>
-      <div
-        className="input-group mb-3 text-center d-flex justify-content-center"
-        style={{ with: "100%" }}
-      >
-        <button
-          className="btn btn-outline-primary"
-          type="button"
-          onClick={handleCountDown}
-        >
+    <Stack justify='space-evenly'>
+      <Box>
+        <Text fontSize={"xl"}>Cantidad:</Text>
+      </Box>
+
+      <ButtonGroup alignItems="center" justifyContent="center">
+        <Button onClick={handleCountDown} w="20%" textAlign="center">
           -
-        </button>
-        <span className="input-group-text px-5">{count}</span>
-        <button
-          className="btn btn-outline-primary"
-          type="button"
-          onClick={handleCountUp}
-        >
+        </Button>
+        <Text w="20%" textAlign="center">
+          {count}
+        </Text>
+        <Button onClick={handleCountUp} w="20%" textAlign="center">
           +
-        </button>
-      </div>
-      <Button variant="success" onClick={() => onAdd(count)}>Añadir al carrito</Button>
-    </>
+        </Button>
+      </ButtonGroup>
+
+      <Box>
+        <Button
+          w={"full"}
+          bg={"gray.400"}
+          color={"white"}
+          rounded={"xl"}
+          boxShadow={"0 5px 20px 0px rgb(160 174 192 / 43%)"}
+          _hover={{
+            bg: "gray.500",
+          }}
+          _focus={{
+            bg: "gray.500",
+          }}
+          onClick={() => onAdd(count)}
+        >
+          Añadir al carrito
+        </Button>
+      </Box>
+    </Stack>
   );
 };
 
