@@ -6,12 +6,12 @@ import {getFirestore} from 'firebase/firestore'
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDMdRQmrtGxFYR53wET15Ke4U4MQCxAybU",
-  authDomain: "sugar-bowl-ecommerce.firebaseapp.com",
-  projectId: "sugar-bowl-ecommerce",
-  storageBucket: "sugar-bowl-ecommerce.appspot.com",
-  messagingSenderId: "434829869876",
-  appId: "1:434829869876:web:12cd3379cf503a206c5b61"
+  apiKey: "AIzaSyCVOhM4TTksoLK4ikSPJXISytma-EdiRdE",
+  authDomain: "juanma-ecomerce.firebaseapp.com",
+  projectId: "juanma-ecomerce",
+  storageBucket: "juanma-ecomerce.appspot.com",
+  messagingSenderId: "33116582186",
+  appId: "1:33116582186:web:cf7d0b9f748ac7c7e92e53"
 };
 
 // Initialize Firebase

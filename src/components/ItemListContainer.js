@@ -30,10 +30,9 @@ const ItemListContainer = () => {
         const data = await getDocs(dbProducts);
         data.forEach((document) => {
           docs.push({...document.data(), id: document.id})
-          console.log(docs)
         });
-        console.log(items)
         setItems(docs)
+        // console.log(items)
       }
     }
     requestData();

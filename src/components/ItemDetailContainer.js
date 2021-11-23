@@ -20,10 +20,14 @@ const ItemDetailContainer = () => {
 
   useEffect(() => {
     setIsLoading(true);
+     
     const requestItem = async () => {
       const productQuery = doc(db, "products", id);
       const product = await getDoc(productQuery);
       const productData = product.data();
+      if(productData){
+        productData.id = id
+      }
       setItem(productData);   
     }
     requestItem();

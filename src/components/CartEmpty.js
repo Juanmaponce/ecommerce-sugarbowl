@@ -1,19 +1,24 @@
 import React from "react";
-import { Button } from "react-bootstrap";
+import { Button, Box, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
 const CartEmpty = () => {
   return (
-    <div>
-      <div className="d-flex justify-content-center">
-        <h3 className="fs-2">Tu carrito de compras esta vacio</h3>
-      </div>
-      <div className="d-flex justify-content-center my-5">
-        <Link to="/">
-          <Button variant="dark">Volver a comprar</Button>
-        </Link>
-      </div>
-    </div>
+    <Box
+      alignItems="center"
+      justifyContent="center"
+      w="80%"
+      mt={8}
+      h="30rem"
+      display="flex"
+      boxShadow={"2xl"}
+      flexDirection="column"
+    >
+      <Text fontSize='2xl' color="gray.500" casing='uppercase'>No tienes nada en tu carrito</Text>
+      <Link to="/">
+        <Button colorScheme="gray" my={3}>Volver a comprar</Button>
+      </Link>
+    </Box>
   );
 };
 

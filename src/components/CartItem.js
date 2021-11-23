@@ -1,6 +1,8 @@
 import React from "react";
-import { Card, Button } from "react-bootstrap";
+import { Box, HStack, Image, Text, Button } from "@chakra-ui/react";
 import { useCartContext } from './CartContext'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -10,18 +12,22 @@ const CartItem = ({ item }) => {
   
 
   return (
-    <div className="d-flex justify-content-center my-5">
-      <Card style={{ width: "22rem" }}>
-        <Card.Img variant="top" src={item.image} />
-        <Card.Body>
-          <Card.Title>{item.title}</Card.Title>
-          <Card.Text>Cantidad: {item.quantity} Precio{item.price * item.quantity}</Card.Text>
-          <div className="d-flex justify-content-center">
-            <Button variant='danger' onClick={() => removeItem(item.id)}>delete</Button>
-          </div>
-        </Card.Body>
-      </Card>
-    </div>
+    <HStack p={5} w="70%" display="flex" justify="space-around" borderBottom="1px solid gray"> 
+      <Box>
+        <Image src={item.img} width='100px'/>
+      </Box>
+      <Box>
+        <Text fontSize={"2xl"} fontFamily={"body"} fontWeight={500} >{item.title}</Text>
+        <Text>{item.description}</Text>
+        <Text color={"gray.600"}>Cantidad: {item.quantity}</Text>
+      </Box>
+      <Box>
+        <Text fontSize={"2xl"} fontFamily={"body"} fontWeight={500}  >${item.price}</Text>
+      </Box>
+      <Box>
+        <Button colorScheme="red" onClick={() => removeItem(item.id)}><FontAwesomeIcon icon={faTrash}></FontAwesomeIcon></Button>
+      </Box>
+    </HStack>
   );
 };
 

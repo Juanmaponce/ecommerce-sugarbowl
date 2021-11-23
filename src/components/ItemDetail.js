@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import ItemCount from "./ItemCount";
 import { useCartContext } from "./CartContext";
@@ -15,12 +15,9 @@ import {
 const ItemDetail = ({ item }) => {
   const { addItem } = useCartContext();
 
-  const [count, setCount] = useState(null);
 
   const onAdd = (count) => {
-    count > 0
-      ? setCount(addItem(item, count), count)
-      : alert("Agregar producto");
+    addItem(item, count)  
   };
 
   return (
