@@ -7,7 +7,7 @@ export const useCartContext = () => useContext(CartContext)
 
 export const CartProvider = ({ children }) =>{
     const [cart, setCart] = useState([])
-    console.log(cart)
+   
 	const addItem = (dataProduct, quantity) => {
 		if (isInCart(dataProduct.id)) {
 			const newCart = cart.map((cartElement) => {

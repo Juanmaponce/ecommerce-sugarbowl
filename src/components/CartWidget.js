@@ -12,7 +12,7 @@ const CartWidget = () => {
        return _.sumBy(cart, function(item){return item.quantity})
     }
     const cartQuantity = 0 + totalItems();
-    console.log(cartQuantity)
+    
 
     return (
         <Flex>
